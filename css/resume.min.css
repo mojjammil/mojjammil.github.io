@@ -89,7 +89,7 @@ p.lead {
 }
 
 #sideNav .navbar-toggler:focus {
-    outline-color: #3e85dd
+    outline-color: #3e85dd;
 }
 
 @media (min-width:992px) {
@@ -208,3 +208,141 @@ hr {
 custom_logo {
 	height: 52px
 }
+
+[tooltip]{
+    /* margin:20px 60px; */
+    position:relative;
+    display:inline-block;
+  }
+
+  [tooltip]::before {
+      content: "";
+      position: absolute;
+      top:-6px;
+      left:50%;
+      transform: translateX(-50%);
+      /* border-width: 4px 6px 0 6px; */
+      border-style: solid;
+      border-color: rgba(0,0,0,0.7) transparent transparent transparent;
+      z-index: 99;
+      opacity:0;
+  }
+
+  [tooltip-position='bottom']::before{
+    top:100%;
+    margin-top:8px;
+    transform: translateX(-50%) translateY(-100%) rotate(-180deg)
+  }
+
+  [tooltip-position='top']::before{
+    left:50%;
+  }
+
+  [tooltip-position='right']::before{
+    left:100%;
+    top:50%;
+    margin-left:1px;
+    transform:translateY(-50%) rotate(90deg)
+  }
+
+  [tooltip]::after {
+    content: attr(tooltip);
+    position: absolute;
+    left:50%;
+    top:-6px;
+    transform: translateX(-50%)   translateY(-100%);
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 140px;
+    border-radius: 5px;
+    pointer-events: none;
+    padding: 4px 4px;
+    z-index:99;
+    opacity:0;
+}
+
+[tooltip-position='bottom']::after{
+    top:100%;
+    margin-top:8px;
+    transform: translateX(-50%) translateY(0%);
+  }
+
+  [tooltip-position='top']::after{
+    left:40%;
+  }
+
+  [tooltip-position='right']::after{
+    left:100%;
+    top:50%;
+    margin-left:8px;
+    transform: translateX(-0.6%)   translateY(-50%);
+  }
+
+  [tooltip]:hover::after,[tooltip]:hover::before {
+    opacity:1
+ }
+
+ /*Portfolio CSS*/
+  a:focus {
+    outline: none;
+  }
+  
+  .portfolioFilter {
+    padding: 15px 0;
+  }
+  
+  .portfolioFilter a {
+    margin-right: 6px;
+    color: #666;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    padding: 4px 15px;
+    border-radius: 50px;
+    display: inline-block;
+  }
+  
+  .portfolioFilter a.current {
+    background: #1e1e1e;
+    border: 1px solid #1e1e1e;
+    color: #f9f9f9;
+  }
+  .portfolioContainer{
+    border: 1px solid #eee;
+    border-radius: 3px;
+  }
+  img {
+    margin: 5px;
+    max-width:100%;
+  }
+  
+  .isotope-item {
+    z-index: 2;
+  }
+  
+  .isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .isotope,
+  .isotope .isotope-item {
+    /* change duration value to whatever you like */
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+  }
+  
+  .isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+  }
+  
+  .isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+  }
