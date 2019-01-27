@@ -64,9 +64,9 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
           </li>
-          <!-- <li class="nav-item">
+          <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-          </li> -->
+          </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#education">Education</a>
           </li>
@@ -216,83 +216,80 @@
 
       </section>
 
-      <!-- <hr class="m-0">
+      <!-- Portfolio Section -->
+      <hr class="m-0">
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="portfolio">
         <div class="my-auto">
           <h2 class="mb-5">Portfolio</h2>
+          <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('javascript')"> JavaScript</button>
+            <button class="btn" onclick="filterSelection('unity')"> Unity</button>
+            <button class="btn" onclick="filterSelection('ar')"> Augmented Reality(AR)</button>
+          </div>
           
-          <div class="container">
-
-            <ul id="filters" class="clearfix">
-              <li><span class="filter active" data-filter=".app, .card, .icon, .logo, .web">All</span></li>
-              <li><span class="filter" data-filter=".app">App</span></li>
-              <li><span class="filter" data-filter=".card">Card</span></li>
-              <li><span class="filter" data-filter=".icon">Icon</span></li>
-              <li><span class="filter" data-filter=".logo">Logo</span></li>
-              <li><span class="filter" data-filter=".web">Web</span></li>
-            </ul>
-        
-            <div id="portfoliolist">
-              
-              <div class="portfolio logo" data-cat="logo">
-                <div class="portfolio-wrapper">				
-                  <img src="img/portfolios/logo/5.jpg" alt="" />
-                  <div class="label">
-                    <div class="label-text">
-                      <a class="text-title">Bird Document</a>
-                      <span class="text-category">Logo</span>
-                    </div>
-                    <div class="label-bg"></div>
-                  </div>
-                </div>
-              </div>																															
-              
-              <div class="portfolio icon" data-cat="icon">
-                <div class="portfolio-wrapper">			
-                  <img src="img/portfolios/icon/3.jpg" alt="" />
-                  <div class="label">
-                    <div class="label-text">
-                      <a class="text-title">Sandwich</a>
-                      <span class="text-category">Icon</span>
-                    </div>
-                    <div class="label-bg"></div>
-                  </div>
-                </div>
-              </div>																								
-              
-              <div class="portfolio card" data-cat="card">
-                <div class="portfolio-wrapper">			
-                  <img src="img/portfolios/card/3.jpg" alt="" />
-                  <div class="label">
-                    <div class="label-text">
-                      <a class="text-title">Reality</a>
-                      <span class="text-category">Business card</span>
-                    </div>
-                    <div class="label-bg"></div>
-                  </div>
-                </div>
-              </div>	
-        
-              <div class="portfolio logo" data-cat="logo">
-                <div class="portfolio-wrapper">			
-                  <img src="img/portfolios/logo/2.jpg" alt="" />
-                  <div class="label">
-                    <div class="label-text">
-                      <a class="text-title">Speciallisterne</a>
-                      <span class="text-category">Logo</span>
-                    </div>
-                    <div class="label-bg"></div>
-                  </div>
-                </div>
-              </div>				
-                            
-              
+          <!-- Portfolio Gallery Grid -->
+          <div class="row">
+            <div class="column javascript">
+              <div class="content">
+                <a href="https://mojjammil.github.io/Rock-paper-scissors/" target="_blank">
+                  <img src="/img/rockpaper.png" alt="Rock Paper Scissors Game UI" class="gallery-thumbnail">
+                </a>
+                <h4>Rock Paper Scissors Game</h4>
+                <p>A simple UI based Rock Paper Scissors Game</p>
+              </div>
+            </div>
+            <div class="column javascript">
+              <div class="content">
+                <a href="https://mojjammil.github.io/Pictionary-Word-Generator/" target="_blank">
+                  <img src="/img/pictionary.PNG" alt="Pictionary Game" class="gallery-thumbnail">
+                </a>
+                <h4>Class Party Pictionary</h4>
+                <p>Decieving pictionary game I made during QIT 2018 class party</p>
+              </div>
             </div>
             
-          </div> 
-          container -->
+            <div class="column unity">
+              <div class="content">
+                <a href="https://mojjammil.github.io/CubeRunner/" target="_blank">
+                  <img src="/img/cuberunner.PNG" alt="CubeRunner Game" class="gallery-thumbnail">
+                </a>
+                <h4>CubeRunner Game</h4>
+                <p>A Unity game to simulate endless runner. Control with Keyboard's A and D keys.</p>
+              </div>
+            </div>
+          
+            <div class="column ar">
+              <div class="content">
+                <a href="https://twitter.com/TanzilCodes/status/1064833522714796032" target="_blank">
+                  <img src="/img/archristmas.png" alt="AR Christmas App" class="gallery-thumbnail">
+                </a>
+                <h4>AR Christmas Presents App</h4>
+                <p>An ARCore based Christmas Presents app utilizing ARCore point cloud and horizontal plane detection</p>
+              </div>
+            </div>
 
+            <div class="column ar">
+              <div class="content">
+                <a href="https://twitter.com/TanzilCodes/status/1065182551260782592" target="_blank">
+                  <img src="/img/arsnake.png" alt="AR Snake Game" class="gallery-thumbnail">
+                </a>
+                <h4>AR Snake</h4>
+                <p>An ARCore based Snake Game</p>
+              </div>
+            </div>
+            
+            <div class="column ar">
+              <div class="content">
+                <a href="https://twitter.com/TanzilCodes/status/1065182551260782592" target="_blank">
+                  <img src="/img/arportal.png" alt="AR Portal" class="gallery-thumbnail">
+                </a>
+                <h4>AR 3D Portal</h4>
+                <p>An ARCore based Portal effect with 3D model. I also made another version with 360 video world.</p>
+              </div>
+            </div>
+          <!-- END GRID -->          
       </section>
 
       <hr class="m-0">
@@ -305,7 +302,7 @@
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Business College, Helsinki</h3>
               <div class="subheading mb-3">Vocational Qualification of Information and Communications Technology</div>
-              <div>The course is focused on Fullstack JavaScript React Software Development</div>
+              <div>The course is focused on Fullstack JavaScript React Software Development.</div>
 			  <p>I already started my on the job training section of the degree which requires working as a developer with a team for 5 months.</p>
             </div>
             <div class="resume-date text-md-right">
@@ -478,37 +475,6 @@
     </div>
 
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <!-- Import MixItUp -->
-    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>    
-    <script type="text/javascript">
-    $(function () {
-      
-      var filterList = {
-      
-        init: function () {
-        
-          // MixItUp plugin
-          // http://mixitup.io
-          $('#portfoliolist').mixItUp({
-            selectors: {
-              target: '.portfolio',
-              filter: '.filter'	
-            },
-            load: {
-              filter: '.app'  
-            }     
-          });								
-        
-        }
-  
-      };
-      
-      // Run the show!
-      filterList.init();
-      
-      
-    });		
-    </script>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -519,6 +485,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/resume.min.js"></script>
+    <script src="js/portfolio.js"></script>
 
   </body>
 
